@@ -22,7 +22,7 @@ resource "aws_ecs_cluster" "ecs-cluster-1" {
     max_size                    = "4"
     min_size                    = "1"
     desired_capacity            = "${var.capacity}"
-    vpc_zone_identifier         = ["subnet-0bacaae249a2fd391","subnet-0bacaae249a2fd391"]
+    vpc_zone_identifier         = ["subnet-12557f2c","subnet-483fd82e"]
     launch_configuration        = "${aws_launch_configuration.ecs-launch-configuration-1.name}"
     health_check_type           = "ELB"
   }
@@ -39,7 +39,7 @@ resource "aws_ecs_cluster" "ecs-cluster-1" {
     lifecycle {
       create_before_destroy = true
     }
-    security_groups             = ["sg-37f61246"]
+    security_groups             = ["sg-04790138036444e0f"]
     associate_public_ip_address = "true"
     key_name                    = "harness"
     user_data                   = <<EOF
