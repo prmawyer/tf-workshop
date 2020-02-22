@@ -6,7 +6,7 @@ provider "aws" {
 
 terraform {
    backend "s3" {
-   bucket = "rc-tf-remote-state-bucket"
+   bucket = "pmawyer-harness-terraform-exercise3"
    region = "us-east-1"
   }
 }
