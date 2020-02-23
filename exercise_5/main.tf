@@ -29,7 +29,7 @@ resource "aws_ecs_cluster" "ecs-cluster-1" {
   resource "aws_launch_configuration" "ecs-launch-configuration-1" {
     name                        = "ecs-lb-${var.ecs-cluster-1}"
     image_id                    = "ami-0b9a214f40c38d5eb"
-    instance_type               = "t2.medium"
+    instance_type               = "t2.large"
     iam_instance_profile        = "ecsInstanceRole"
     root_block_device {
       volume_type = "standard"
